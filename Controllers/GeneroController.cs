@@ -17,7 +17,11 @@ namespace api_filmes_senai.Controllers
         {
             _generoRepository = generoRepository;
         }
-
+        /// <summary>
+        /// Endpoint para buscar um Genero pelo seu Id
+        /// </summary>
+        /// <param name="id">Id do Genero buscado</param>
+        /// <returns>Genero Buscado</returns>
         [HttpGet]
         public IActionResult Get()
         {
@@ -31,7 +35,11 @@ namespace api_filmes_senai.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Endpoint para buscar um Genero pelo seu Id
+        /// </summary>
+        /// <param name="id">Id do Genero buscado</param>
+        /// <returns>Genero Buscado</returns>
         [Authorize]
         [HttpPost]
         public IActionResult Post(Genero novoGenero)
@@ -46,7 +54,11 @@ namespace api_filmes_senai.Controllers
                 return BadRequest(error.Message);
             }
         }
-
+        /// <summary>
+        /// Endpoint para buscar um Genero pelo seu Id
+        /// </summary>
+        /// <param name="id">Id do Genero buscado</param>
+        /// <returns>Genero Buscado</returns>
         [HttpGet("BuscarPorId/{id}")]
         public IActionResult GetById(Guid id)
         {
@@ -61,7 +73,12 @@ namespace api_filmes_senai.Controllers
             }
 
         }
-
+        /// <summary>
+        /// Endpoint para buscar um Genero pelo seu Id
+        /// </summary>
+        /// <param name="id">Id do Genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
@@ -75,8 +92,12 @@ namespace api_filmes_senai.Controllers
                 throw;
             }
         }
-
-
+        /// <summary>
+        /// Endpoint para buscar um Genero pelo seu Id
+        /// </summary>
+        /// <param name="id">Id do Genero buscado</param>
+        /// <returns>Genero Buscado</returns>
+        [Authorize]
         [HttpPut("{id}")]
         public IActionResult Put(Guid id, Genero genero)
         {
