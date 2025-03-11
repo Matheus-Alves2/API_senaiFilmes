@@ -3,6 +3,7 @@ using api_filmes_senai.Domains.StringLenght;
 using api_filmes_senai.Interfaces;
 using api_filmes_senai.Repositories;
 using api_filmes_senai.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,6 +26,7 @@ namespace api_filmes_senai.Controllers
         /// </summary>
         /// <param name="id">Id do Filme buscado</param>
         /// <returns>Usuario Buscado</returns>
+        [Authorize]
         [HttpPost]
         public IActionResult Post(Usuario usuario)
         {

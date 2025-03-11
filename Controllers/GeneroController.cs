@@ -22,6 +22,7 @@ namespace api_filmes_senai.Controllers
         /// </summary>
         /// <param name="id">Id do Genero buscado</param>
         /// <returns>Genero Buscado</returns>
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -36,7 +37,7 @@ namespace api_filmes_senai.Controllers
         }
 
         /// <summary>
-        /// Endpoint para buscar um Genero pelo seu Id
+        /// Endpoint para cadastrar um Genero pelo seu Id
         /// </summary>
         /// <param name="id">Id do Genero buscado</param>
         /// <returns>Genero Buscado</returns>
@@ -74,7 +75,7 @@ namespace api_filmes_senai.Controllers
 
         }
         /// <summary>
-        /// Endpoint para buscar um Genero pelo seu Id
+        /// Endpoint para deletar um Genero pelo seu Id
         /// </summary>
         /// <param name="id">Id do Genero buscado</param>
         /// <returns>Genero Buscado</returns>
@@ -93,7 +94,7 @@ namespace api_filmes_senai.Controllers
             }
         }
         /// <summary>
-        /// Endpoint para buscar um Genero pelo seu Id
+        /// Endpoint para atualizar um Genero pelo seu Id
         /// </summary>
         /// <param name="id">Id do Genero buscado</param>
         /// <returns>Genero Buscado</returns>
